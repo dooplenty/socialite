@@ -137,4 +137,18 @@ class SocialiteManager extends Manager implements Contracts\Factory
     {
         throw new InvalidArgumentException("No Socialite driver was specified.");
     }
+
+     /**
+     * Create an instance of the specified driver.
+     *
+     * @return \Laravel\Socialite\One\AbstractProvider
+     */
+    protected function createYahooFantasyDriver()
+    {
+        $config = $this->app['config']['services.yahoo'];
+
+        return $this->buildProvider(
+            'Laravel\Socialite\Two\YahooProvider', $config
+        );
+    }
 }
