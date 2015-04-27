@@ -143,7 +143,7 @@ class SocialiteManager extends Manager implements Contracts\Factory
      *
      * @return \Laravel\Socialite\One\AbstractProvider
      */
-    protected function createYahooFantasyDriver()
+    protected function createYahooDriver()
     {
         $config = $this->app['config']['services.yahoo'];
 
